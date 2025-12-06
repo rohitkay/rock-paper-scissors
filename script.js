@@ -14,4 +14,10 @@ function getComputerChoice(){
     }
 }
 
+function getHumanChoice(){
+    userInput = prompt("Please enter your choice:");
+    return userInput;
+}
+
 console.log(getComputerChoice());
+console.log(getHumanChoice());

@@ -24,11 +24,12 @@ function getHumanChoice(){
 
 
 function playRound(humanChoice,computerChoice){
-    
+    humanChoice = humanChoice.toLowerCase();
+    console.log(`This is the human choice in lowercase ${humanChoice}`);
 }
 
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+/*console.log(getComputerChoice());
+console.log(getHumanChoice());*/
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();

@@ -38,6 +38,18 @@ function playRound(humanChoice,computerChoice){
         console.log("You win! Rock beats scissors");
         humanScore = humanScore + 1;
     }
+    
+    else if (humanChoice == "paper" && computerChoice == "paper"){
+        console.log("Its a tie!");
+    }
+    else if (humanChoice == "paper" && computerChoice == "scissors"){
+        console.log("You lose! Scissors beats paper");
+        computerscore = computerScore + 1;
+    }
+    else if (humanChoice == "paper" && computerChoice == "rock"){
+        console.log("You win! Paper beats rock");
+        humanScore = humanScore + 1;
+    }
 
 
 }

@@ -22,5 +22,9 @@ function getHumanChoice(){
     return userInput;
 }
 
+function playRound(humanChoice,computerChoice){
+    
+}
+
 console.log(getComputerChoice());
 console.log(getHumanChoice());

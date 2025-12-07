@@ -26,6 +26,20 @@ function getHumanChoice(){
 function playRound(humanChoice,computerChoice){
     humanChoice = humanChoice.toLowerCase();
     console.log(`This is the human choice in lowercase ${humanChoice}`);
+
+    if (humanChoice == "rock" && computerChoice == "rock"){
+        console.log("Its a tie!");
+    }
+    else if (humanChoice == "rock" && computerChoice == "paper"){
+        console.log("You lose! Paper beats rock");
+        computerscore = computerScore + 1;
+    }
+    else if (humanChoice == "rock" && computerChoice == "scissors"){
+        console.log("You win! Rock beats scissors");
+        humanScore = humanScore + 1;
+    }
+
+
 }
 
 /*console.log(getComputerChoice());

@@ -37,7 +37,10 @@ scissorButton.addEventListener("click",()=>{
 });
 
 const message = document.querySelector("#roundStatus");
+const winnerMessage = document.querySelector("#winnerMessage");
 
+const humanPoints = document.querySelector("#humanScore");
+const compPoints = document.querySelector("#computerScore");
 
 
 
@@ -92,6 +95,19 @@ function playRound(humanChoice,computerChoice){
         humanScore = humanScore + 1;
     }
 
+    console.log(`Human Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`)
+
+    compPoints.textContent =`Computers score: ${computerScore}`;
+    humanPoints.textContent = `Your score: ${humanScore}`;
+
+    if(humanScore == 5){
+        winnerMessage.textContent = "You win 5 rounds, refresh the browser to replay"
+    }
+    if(computerScore == 5){
+        winnerMessage.textContent = "Computer wins 5 rounds, refresh the browser to replay"
+    }
+
 }
 
 
@@ -116,6 +132,8 @@ function playGame(){
     else{
         console.log("Its a tie for the full game!");
     }
+
+
 
 }
 

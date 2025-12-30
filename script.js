@@ -42,7 +42,10 @@ const winnerMessage = document.querySelector("#winnerMessage");
 const humanPoints = document.querySelector("#humanScore");
 const compPoints = document.querySelector("#computerScore");
 
-
+const gameContainer = document.querySelector(".gameContainer");
+const topSection = document.querySelector(".top-section");
+const buttons = document.querySelector(".buttons");
+const instruction = document.querySelector(".instruction");
 
 function playRound(humanChoice,computerChoice){
     humanChoice = humanChoice.toLowerCase();
@@ -102,14 +105,17 @@ function playRound(humanChoice,computerChoice){
     humanPoints.textContent = `Your score: ${humanScore}`;
 
     if(humanScore == 5){
-        winnerMessage.textContent = "You win 5 rounds, refresh the browser to replay"
+        message.textContent = "You win 5 rounds, refresh the browser to replay"
+        buttons.setAttribute("style","display:none;");
+        instruction.setAttribute("style","display:none;");
     }
     if(computerScore == 5){
-        winnerMessage.textContent = "Computer wins 5 rounds, refresh the browser to replay"
+        message.textContent = "Computer wins 5 rounds, refresh the browser to replay"
+        buttons.setAttribute("style","display:none;");
+        instruction.setAttribute("style","display:none;");
     }
 
 }
-
 
 
 function playGame(){

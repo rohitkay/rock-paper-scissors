@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <script src ="./script.js" defer>
     </script>
-    <button id="rockButton">Rock</button>
-    <button id="paperButton">Paper</button>
-    <button id="scissorButton">Scissors</button>
-    <h4 id = "roundStatus">Select an option</h4>
-    <h4 id ="winnerMessage"></h4>
-    <p id ="humanScore">Your score: </p>
-    <p id ="computerScore">Computer score: </p>
+    <div class="main-container">
+        <img id="logo" src="./rpslogo.png"/>
+        <div class="game-container">
+            <div class="top-section">
+                <h3 class="instruction">Pick a move:</h3>
+                <div class="buttons">
+                    <button class= "choice" id="rockButton">🪨 Rock</button>
+                    <button class = "choice" id="paperButton">📄 Paper</button>
+                    <button class = "choice" id="scissorButton">✂️ Scissors</button>
+                </div>
+                <h4 id = "roundStatus"></h4>
+                <h4 id ="winnerMessage"></h4>
+            </div>
+            <div class="score-section">
+                <p id ="humanScore">Your score: </p>
+                <p id ="computerScore">Computer score: </p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

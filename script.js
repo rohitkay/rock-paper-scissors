@@ -36,6 +36,8 @@ scissorButton.addEventListener("click",()=>{
     playRound("scissors",getComputerChoice());
 });
 
+const message = document.querySelector("#roundStatus");
+
 
 
 
@@ -45,39 +47,48 @@ function playRound(humanChoice,computerChoice){
 
     if (humanChoice == "rock" && computerChoice == "rock"){
         console.log("Its a tie!");
+        message.textContent = "Its a tie!";
     }
     else if (humanChoice == "rock" && computerChoice == "paper"){
         console.log("You lose! Paper beats rock");
+        message.textContent = "You lose! Paper beats rock";
         computerScore = computerScore + 1;
     }
     else if (humanChoice == "rock" && computerChoice == "scissors"){
         console.log("You win! Rock beats scissors");
+        message.textContent = "You win! Rock beats Scissors";
         humanScore = humanScore + 1;
     }
     
 
     else if (humanChoice == "paper" && computerChoice == "paper"){
         console.log("Its a tie!");
+        message.textContent = "Its a tie!";
     }
     else if (humanChoice == "paper" && computerChoice == "scissors"){
         console.log("You lose! Scissors beats paper");
+        message.textContent = "You lose! Scissors beats paper";
         computerScore = computerScore + 1;
     }
     else if (humanChoice == "paper" && computerChoice == "rock"){
         console.log("You win! Paper beats rock");
+        message.textContent = "You win! Paper beats rock";
         humanScore = humanScore + 1;
     }
 
 
     else if (humanChoice == "scissors" && computerChoice == "scissors"){
         console.log("Its a tie!");
+        message.textContent = "Its a tie!";
     }
     else if (humanChoice == "scissors" && computerChoice == "rock"){
         console.log("You lose! Rock beats scissors");
+        message.textContent = "You lose! Rock beats scissors";
         computerScore = computerScore + 1;
     }
     else if (humanChoice == "scissors" && computerChoice == "paper"){
         console.log("You win! Scissors beats paper");
+        message.textContent = "You win! Scissors beats paper";
         humanScore = humanScore + 1;
     }
 
